@@ -2808,24 +2808,24 @@ str(DFa)</code></pre>
 <p>An aside before we proceed: handling temporal data is confusing. Time is multifaceted, where two of the variants are instantaneous time with data at that time point and interval time with data aggregated over the interval:</p>
 <pre class="r"><code>now &lt;- Sys.time()
 now</code></pre>
-<pre><code>## [1] &quot;2019-10-17 15:38:11 CEST&quot;</code></pre>
+<pre><code>## [1] &quot;2019-10-18 11:20:57 CEST&quot;</code></pre>
 <pre class="r"><code>class(now)</code></pre>
 <pre><code>## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</code></pre>
 <pre class="r"><code>as.Date(now)</code></pre>
-<pre><code>## [1] &quot;2019-10-17&quot;</code></pre>
+<pre><code>## [1] &quot;2019-10-18&quot;</code></pre>
 <pre class="r"><code>unclass(now)</code></pre>
-<pre><code>## [1] 1571319491</code></pre>
+<pre><code>## [1] 1571390458</code></pre>
 <p>One representation is in seconds since the epoch (with decimal parts of a second), another is in components also including important time zone information (time zone listings are updated regularly):</p>
 <pre class="r"><code>str(unclass(as.POSIXlt(now)))</code></pre>
 <pre><code>## List of 11
-##  $ sec   : num 11.1
-##  $ min   : int 38
-##  $ hour  : int 15
-##  $ mday  : int 17
+##  $ sec   : num 57.6
+##  $ min   : int 20
+##  $ hour  : int 11
+##  $ mday  : int 18
 ##  $ mon   : int 9
 ##  $ year  : int 119
-##  $ wday  : int 4
-##  $ yday  : int 289
+##  $ wday  : int 5
+##  $ yday  : int 290
 ##  $ isdst : int 1
 ##  $ zone  : chr &quot;CEST&quot;
 ##  $ gmtoff: int 7200
@@ -2841,7 +2841,7 @@ as.yearmon(now)</code></pre>
 <pre class="r"><code>as.Date(&quot;2018-03-01&quot;) - 1 # day</code></pre>
 <pre><code>## [1] &quot;2018-02-28&quot;</code></pre>
 <pre class="r"><code>seq(as.Date(now), as.Date(now)+12, length.out=4)</code></pre>
-<pre><code>## [1] &quot;2019-10-17&quot; &quot;2019-10-21&quot; &quot;2019-10-25&quot; &quot;2019-10-29&quot;</code></pre>
+<pre><code>## [1] &quot;2019-10-18&quot; &quot;2019-10-22&quot; &quot;2019-10-26&quot; &quot;2019-10-30&quot;</code></pre>
 </div>
 <div id="rs-sessioninfo" class="section level3">
 <h3>R’s <code>sessionInfo()</code></h3>
